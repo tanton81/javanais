@@ -1,0 +1,60 @@
+group 'Javanais'
+version '1.0-SNAPSHOT'
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    
+    dependencies {
+        //classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
+        classpath("gradle.plugin.com.benjaminsproule:swagger-gradle-plugin:1.0.0")
+        classpath("org.asciidoctor:asciidoctor-gradle-plugin:1.5.3")
+    }
+}
+
+//plugins {
+//    id "io.spring.dependency-management" version "1.0.5.RELEASE"
+//}
+
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'application'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'com.benjaminsproule.swagger'
+apply plugin: 'io.spring.dependency-management'
+
+asciidoctor {
+    sourceDir 'src/main/asciidoc'
+    attributes \
+      'snippets': file('target/snippets')
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+bootJar {
+    baseName = 'gs-gradle-javanaise'
+    version =  '0.1.0'
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile("org.springframework.restdocs:spring-restdocs-mockmvc")
+//    testCompile("junit:junit:4.12")
+//    compile("io.swagger:swagger-jersey2-jaxrs:1.5.21")
+//    compile("io.swagger:swagger-scala-module_2.12:1.0.4")
+}
+
