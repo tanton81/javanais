@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/api/dictionary/javanais/v1.0/javanaises/dictionary' -i -X GET
+----

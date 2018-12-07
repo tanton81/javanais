@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ echo '{"motFrancais":"salut","motJavanaise":"'salut' à traduire"}' | http POST 'http://localhost:8080/api/dictionary/javanais/v1.0/javanaises' \
+    'Content-Type:application/json;charset=utf-8'
+----

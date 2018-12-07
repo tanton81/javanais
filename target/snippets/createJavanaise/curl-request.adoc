@@ -1,0 +1,6 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/api/dictionary/javanais/v1.0/javanaises' -i -X POST \
+    -H 'Content-Type: application/json;charset=utf-8' \
+    -d '{"motFrancais":"salut","motJavanaise":"'salut' à traduire"}'
+----

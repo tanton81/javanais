@@ -1,0 +1,4 @@
+[source,options="nowrap"]
+----
+{"motFrancais":"salut","motJavanaise":"'salut' à traduire"}
+----

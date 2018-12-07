@@ -1,0 +1,25 @@
+= Javanais REST Docs
+
+.request
+include::{snippets}/dictionary/http-request.adoc[]
+
+.response
+include::{snippets}/dictionary/http-response.adoc[]
+
+.request
+include::{snippets}/createJavanaise/http-request.adoc[]
+
+.response
+include::{snippets}/createJavanaise/http-response.adoc[]
+
+.request
+include::{snippets}/getJavanaise404/http-request.adoc[]
+
+.response
+include::{snippets}/getJavanaise404/http-response.adoc[]
+
+.request
+include::{snippets}/getJavanaise/http-request.adoc[]
+
+.response
+include::{snippets}/getJavanaise/http-response.adoc[]
