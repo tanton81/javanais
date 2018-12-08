@@ -5,11 +5,13 @@ public class Javanaise {
 
     private String motFrancais;
     private String motJavanaise;
+    private Translator translator;
 
     public Javanaise()
     {
         this.motFrancais = "";
         this.motJavanaise = "";
+        this.translator = new Translator();
     }
 
     public Javanaise(String motFrancais)
@@ -72,7 +74,7 @@ public class Javanaise {
     private String toJavanaise(String motFrancais)
     {
 
-        return "'" + motFrancais + "' à traduire" ;
+        return translator.translate(motFrancais) ;
     }
 
 

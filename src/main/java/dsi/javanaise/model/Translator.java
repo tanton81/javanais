@@ -18,10 +18,15 @@ public class Translator
         consonnes.add('l'); consonnes.add('m'); consonnes.add('n'); consonnes.add('p');
         consonnes.add('r'); consonnes.add('q'); consonnes.add('s'); consonnes.add('t');
         consonnes.add('v'); consonnes.add('w'); consonnes.add('x'); consonnes.add('z');
+        consonnes.add('ç');
 
 
         voyelles.add('a'); voyelles.add('e'); voyelles.add('o');
         voyelles.add('u'); voyelles.add('i'); voyelles.add('y');
+        voyelles.add('à'); voyelles.add('é'); voyelles.add('è');
+        voyelles.add('â'); voyelles.add('ô'); voyelles.add('ê');
+        voyelles.add('û'); voyelles.add('î'); voyelles.add('ù');
+        voyelles.add('ë'); voyelles.add('ï');
     }
 
 
@@ -78,7 +83,7 @@ public class Translator
                 }
             }
             else
-            //if(consonnes.contains(motFrancais.charAt(i)))
+            if(consonnes.contains(motFrancais.charAt(i)))
             {
 
                 //System.out.println("consonne " + motFrancais.charAt(i));
@@ -96,6 +101,11 @@ public class Translator
                     tmp += motFrancais.charAt(i);
                     last = motFrancais.charAt(i);
                 }
+            }
+            else
+            {
+                tmp += motFrancais.charAt(i);
+                last = '_';
             }
         }
 
