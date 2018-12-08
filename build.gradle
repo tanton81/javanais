@@ -16,7 +16,6 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'application'
 apply plugin: 'org.springframework.boot'
@@ -27,6 +26,7 @@ asciidoctor {
     sourceDir 'src/main/asciidoc'
     attributes 'snippets' : file('target/snippets')
 }
+
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
